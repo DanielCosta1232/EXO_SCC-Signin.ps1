@@ -1,6 +1,8 @@
-# If you return any errors, ensure that scripting is enabled on the machine. Then rerun the script
-# Get-ExecutionPolicy -Scope CurrentUser
-# Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+<# 
+If you return any errors, ensure that scripting is enabled on the machine. Then rerun the script
+Get-ExecutionPolicy -Scope CurrentUser
+Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+#>
 
 function Connect-EXO {
   $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $credential -Authentication Basic -AllowRedirection
